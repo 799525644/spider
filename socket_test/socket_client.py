@@ -35,4 +35,5 @@ while True:
     server_data = client.recv(1024)
     print("server response:{}".format(server_data.decode("utf8")))
 
+# 4. 关闭连接
 client.close()

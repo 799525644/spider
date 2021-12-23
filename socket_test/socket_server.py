@@ -58,6 +58,6 @@ while True:
     client_thread.start()
 
 # 6.调用close关闭套接字（循环使用时可省略）
-# sock.close()
+sock.close()
 
 
