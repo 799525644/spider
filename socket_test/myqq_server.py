@@ -22,7 +22,6 @@ server = socket.socket()
 server.bind(("0.0.0.0", 8000))
 server.listen()
 
-
 def handle_sock(sock, addr):
     while True:
         # recv的时候需要解码decord

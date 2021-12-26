@@ -39,7 +39,6 @@ print("历史消息:{}".format(res.decode("utf8")))
 
 exit = False
 
-
 def handle_receive():
     # 处理接受请求
     while True:
