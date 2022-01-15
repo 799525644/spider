@@ -1,5 +1,6 @@
-# socket 服务端
+# socket 服务端，访问端口，以http形式返回内容
 import socket
+import json
 import threading
 
 # 1.调用sokcet()创建套接字
@@ -30,7 +31,7 @@ def handle_sock(sock, addr):
 #         <title>Build a website!</title>
 #     </head>
 #     <body>
-#         Hello world, this is a very simple HTML docmemts.
+#         Hello world, this is a very simple HTML documemt.
 #     </body>
 # </html>
 #
@@ -43,7 +44,7 @@ def handle_sock(sock, addr):
                 <title>Build a website!</title>
             </head> 
             <body>
-                Hello world, this is a very simple HTML docmemts.
+                Hello world, this is a very simple HTML documemt.
             </body>
         </html>
 
