@@ -20,35 +20,18 @@ def handle_sock(sock, addr):
         # recv方法是阻塞的
         tmp_data = sock.recv(1024)
         print(tmp_data.decode("utf8"))
-        # 可以删掉http响应头试试
-        # chrome直接处理成
-        # firefox允许显示
-#         为啥子这种不行！！！
-#         response_template = '''HTTP/1.1 200 OK
-#
-# <html>
-#     <head>
-#         <title>Build a website!</title>
-#     </head>
-#     <body>
-#         Hello world, this is a very simple HTML documemt.
-#     </body>
-# </html>
-#
-# '''
-#         sock.send(response_template.encode("utf8"))
         welcome_page = '''HTTP/1.1 200 OK
 
-        <html>
-            <head>
-                <title>Build a website!</title>
-            </head> 
-            <body>
-                Hello world, this is a very simple HTML documemt.
-            </body>
-        </html>
+<html>
+    <head>
+        <title>Build a website!</title>
+    </head> 
+    <body>
+        Hello world, this is a very simple HTML documemt.
+    </body>
+</html>
 
-        '''
+'''
         sock.send(welcome_page.encode("utf8"))
 
         sock.close()
