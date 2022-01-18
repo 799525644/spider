@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<script>
+<!--    1.js通过id实现提交-->
+    function checkForm() {
+        $("#myform").submit()
+    }
+
+/*
+   2：js通过id实现点击和提交
+     首先要加载完成*/
+    // $(document).ready(function() {
+    //     $("#myform").click(function () {
+    //         $("#myform").submit()
+    //     })
+    //
+    //     $.ajax({
+    //         type:"post",
+    //         url:"http://127.0.0.1:8000",
+    //         data: $("#myform").serialize(),
+    //         success:function (data) {
+    //             console.log(data)
+    //         }
+    //     })
+    // })
+</script>
+
+<body>
+<!-- js控制提交，其余均由h5控制-->
+    <form id="myform" action="http://127.0.0.1:8000" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name"/>
+        <input type="password" name="password">
+        <input type="file" name="file">
+        <input type="button" onclick="checkForm();" value="登录">
+    </form>
+
+<!--    <form id="myform" action="http://127.0.0.1:8000" method="POST" enctype="multipart/form-data">-->
+<!--        <input type="text" name="name"/>-->
+<!--        <input type="password" name="password">-->
+<!--        <input type="file" name="file">-->
+<!--        <input type="button" value="登录">-->
+<!--    </form>-->
+<!--    <form id="myform" >-->
+<!--        <input type="text" name="name"/>-->
+<!--        <input type="password" name="password">-->
+<!--        <input type="file" name="file">-->
+<!--        <input type="button" value="登录">-->
+<!--    </form>-->
+
+</body>
+</html>
