@@ -33,9 +33,8 @@ def handle_sock(sock, addr):
 
 '''
         sock.send(welcome_page.encode("utf8"))
-
-        sock.close()
         break
+    # sock.close()放在哪里才合适？
 
 while True:
     # 阻塞等待连接
